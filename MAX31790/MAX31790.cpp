@@ -3,15 +3,15 @@
  *	MAX31790 Device Class
  *	Based on Maxim MAX31790 datasheet rev. 2, 01/2015
  *	
- *	Reworked by Driosenth 2020-12-20
+ *	Reworked by Driosenth
  *	
- *	Original Work Done 07/24/2016 By Joao Paulo Porto <jpjporto(at)gmail.com>
+ *	Original Code By Joao Paulo Porto <jpjporto(at)gmail.com> 2016-07-24 
  *
  *	Driosenth Changelog
- *		v0.2.1
+ *		v0.2.1	(2021-01-08)
  *				- Added general setD and getD functions
  *				- Added tuneSR function to set speed range to ideal for a given PWM
- *		v0.2.0 	
+ *		v0.2.0 	(2020-12-20)
  *				- declaration now inputs the datasheet i2c, bitshift happens in class
  *				- initialization now forcefully resets then sets all settings
  *				- set functions are now (Fan #, Value)
