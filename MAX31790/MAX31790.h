@@ -52,9 +52,11 @@ public:
 	
 	void initialize();
 	
-	
+	// Tune Function
+	bool tuneSR(uint8_t, uint16_t);
 	
 	// Set functions
+	bool setD(uint8_t, String, double);
 	bool setPWM(uint8_t, uint16_t);
 	bool setSPD(uint8_t, uint8_t);
 	bool setSR(uint8_t, uint8_t);		// Set Speed Range (SR), [1,2,4,8,16,32]
@@ -87,18 +89,18 @@ public:
 	
 	
 	void setPWMMode(uint8_t);
-	void setRPMMode(uint8_t);
-	
-	// Get Functions
-	
+	void setRPMMode(uint8_t);	
 	
 	// Get functions
+	double getD(uint8_t, String);
 	uint16_t getPWM(uint8_t);
 	uint16_t getSPD(uint8_t);
-	uint16_t getTAC(uint8_t);
 	uint8_t  getSR (uint8_t);
 	uint8_t getPPR(uint8_t);
 	double getPPM3(uint8_t);
+	double getPPL(uint8_t);
+	double getPPG(uint8_t);
+	uint16_t getTAC(uint8_t);
 	double getPPS(uint8_t);
 	double getPPM(uint8_t);
 	double getPPH(uint8_t);
@@ -124,7 +126,7 @@ private:
 	uint8_t devAddr;
 	uint8_t buffer[2];
 	uint8_t NP[6]={2,2,2,2,2,2};
-	double PPM3[6]={1000,1000,1000,1000,1000,1000};
+	double PPM3[6]={1000000,1000000,1000000,1000000,1000000,1000000};
 	uint8_t hold[2];
 	
 	
