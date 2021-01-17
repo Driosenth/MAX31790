@@ -81,6 +81,7 @@ public:
 	|	32	|  2047 | 2047 | 2047 | 1966 | 983  |  491  |  245  |
 	|-----------------------------------------------------------|
 	*/
+	bool setAT(uint8_t, bool);
 	bool setPPR(uint8_t, uint8_t);
 	bool setPPM3(uint8_t, double);
 	bool setPPL(uint8_t, double);
@@ -96,6 +97,7 @@ public:
 	uint16_t getPWM(uint8_t);
 	uint16_t getSPD(uint8_t);
 	uint8_t  getSR (uint8_t);
+	bool	getAT(uint8_t);
 	uint8_t getPPR(uint8_t);
 	double getPPM3(uint8_t);
 	double getPPL(uint8_t);
@@ -128,6 +130,7 @@ private:
 	uint8_t NP[6]={2,2,2,2,2,2};
 	double PPM3[6]={1000000,1000000,1000000,1000000,1000000,1000000};
 	uint8_t hold[2];
+	bool autotune[6]={false,false,false,false,false,false};
 	
 	
 	
