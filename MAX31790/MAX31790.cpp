@@ -9,7 +9,7 @@
  *
  *	Driosenth Changelog
  *		v0.2.2 (2021-01-17)
- *				- Added autotune functions, setAT(Fan #, true/false) and getAT(Fan #). Default False. When true, will tune SR each time getTach is called.
+ *				- Added autotune Speed Range (SR) functions, setAT(Fan #, true/false) and getAT(Fan #). Default False. When true, will tune SR each time getTach is called.
  *		v0.2.1	(2021-01-08)
  *				- Added general setD and getD functions
  *				- Added tuneSR function to set speed range to ideal for a given PWM
