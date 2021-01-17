@@ -8,6 +8,8 @@
  *	Original Code By Joao Paulo Porto <jpjporto(at)gmail.com> 2016-07-24 
  *
  *	Driosenth Changelog
+ *		v0.2.2 (2021-01-17)
+ *				- Added autotune functions, setAT(Fan #, true/false) and getAT(Fan #). Default False. When true, will tune SR each time getTach is called.
  *		v0.2.1	(2021-01-08)
  *				- Added general setD and getD functions
  *				- Added tuneSR function to set speed range to ideal for a given PWM
@@ -224,6 +226,13 @@ bool MAX31790::setSR(uint8_t fan_num, uint8_t SR)
 	return(true);	
 }
 
+bool MAX31790::setAT(uint8_t fan_num, bool _TUNE)
+{
+	if(fan_num > 6) return(false);
+	autotune[fan_num-1]=_TUNE;
+	return (true);	
+}
+
 bool MAX31790::setPPR(uint8_t fan_num, uint8_t _PPR)
 {
 	if(fan_num > 6) return(false);
@@ -325,6 +334,11 @@ uint8_t MAX31790::getSR(uint8_t fan_num)
 	if ( D7 && !D6 && !D5) return(16);
 	return (32);
 	;
+}
+
+bool MAX31790::getAT(uint8_t fan_num)
+{
+	return (autotune[fan_num-1]);
 }
 
 uint8_t MAX31790::getPPR(uint8_t fan_num)
