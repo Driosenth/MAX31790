@@ -8,6 +8,8 @@
  *	Original Code By Joao Paulo Porto <jpjporto(at)gmail.com> 2016-07-24 
  *
  *	Driosenth Changelog
+ *		v0.2.3 (2021-01-178
+ *				- Corrected spelling mistake
  *		v0.2.2 (2021-01-17)
  *				- Added autotune Speed Range (SR) functions, setAT(Fan #, true/false) and getAT(Fan #). Default False. When true, will tune SR each time getTach is called.
  *		v0.2.1	(2021-01-08)
@@ -296,7 +298,7 @@ double MAX31790::getD(uint8_t fan_num, String DAT)
 	else if (DAT == "M3PH")	{return (MAX31790::getM3PH(fan_num));}
 	else if (DAT == "LPS")	{return (MAX31790::getLPS(fan_num));}
 	else if (DAT == "LPM")	{return (MAX31790::getLPM(fan_num));}
-	else if (DAT == "LH")	{return (MAX31790::getLPH(fan_num));}
+	else if (DAT == "LPH")	{return (MAX31790::getLPH(fan_num));}
 	else if (DAT == "GPS")	{return (MAX31790::getGPS(fan_num));}
 	else if (DAT == "GPM")	{return (MAX31790::getGPM(fan_num));}
 	else if (DAT == "GPH")	{return (MAX31790::getGPH(fan_num));}
